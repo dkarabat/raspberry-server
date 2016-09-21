@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>MongoDB/Spring Boot tutorial from tests4geeks.com</title>
+		<style>
+			table, th, td {
+			   border: 1px solid black;
+			   border-spacing: 0px;
+			}
+			th, td {
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>data</th>
+					<th>temperature</th>
+					<th>humidity</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="dht11 : ${dht11List}">
+					<td th:text="${dht11.id}"></td>
+					<td th:text="${dht11.time}"></td>
+					<td th:text="${dht11.temperature}"></td>
+					<td th:text="${dht11.humidity}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+
+	</body>
+</html>
